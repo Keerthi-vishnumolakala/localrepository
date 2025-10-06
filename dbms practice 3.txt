@@ -1,0 +1,35 @@
+select to_Char(2560,'$99,99,999.00') from dual;
+
+select to_Char(2560,'$00,00,000.00') from dual;
+select to_Char(sysdate,'DD-MM-YYYY') from dual;
+select to_Char(sysdate,'D-MM-YYYY') from dual;//D IS DAY THAT IS Y IT IS 2
+select to_char(sysdate,'DD-MM-YYYY - HH24:MI:SS') FROM DUAL;
+
+select to_char(sysdate,'DDth-MM-YYYY - HH24:MI:SS') FROM DUAL;//8th-09-2025
+
+select to_char(sysdate,'DDspth-MM-YYYY - HH24:MI:SS') FROM DUAL;//eigth-09-2025
+
+select to_date('May 22,2014','Month DD,YYYY') from dual;
+
+select to_date('22 May,2014','DD Month,YYYY') from dual;//it takes only month date and year format only
+
+select to_date('08-Sep-25','DD-MON-YYYY') from dual;
+
+select nvl(address,'NA') from emp;//instead of '-' NA will be seen
+select nvl2(address,'AV','NA') from emp;
+
+select nullif(id,102) from emp;//it will display '-' with id having 102
+
+select city,count(sname) from emp
+group by city;
+
+select city,count(sname) 
+from emp
+where city='gdv'
+group by city;
+
+select city,sum(mobile) 
+from emp 
+group by city having city='gdv';
+
+

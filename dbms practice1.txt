@@ -1,0 +1,41 @@
+create table student(
+    studentid number(3),
+    stu_name varchar2(20) not null,
+    address varchar2(30),
+    pincode number(6),
+    constraints pimary_id primary key(studentid),
+    constraints pc_no check(length(pincode)=6)
+);
+
+desc student;
+
+insert into student values(121,'arun','vijaywada',521325);
+insert into student values(123,'varun','mudinepalli',521325);
+insert into student values(124,'tarun','vijaywada',521325);
+insert into student values(125,'taruna','bantumilli',521324);
+insert into student values(126,'tara','bantumilli',521324);
+insert into student values(127,'tara','bantumilli',521324);
+insert into student values(122,'taruni','gudivada',521324);
+select * from student;
+
+select studentid,stu_name "Student name" from student where stu_name like '%run';
+
+select * from dual;
+
+select * from student 
+where studentid  in(121,122);
+
+select distinct pincode from student;
+
+alter table student add fathersname varchar2(20);
+
+insert into student(studentid,stu_name,fathersname) values(101,'keerthi','rajini kumar');
+
+select * from student;
+
+update student set surname='vishnumolakala' where studentid=101;//only updates the existing column having id as 101 
+
+alter table student
+drop column surname;//if want to drop a column
+
+
