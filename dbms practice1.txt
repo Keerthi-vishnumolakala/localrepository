@@ -9,6 +9,8 @@ create table student(
 
 desc student;
 
+
+Javaaa--
 insert into student values(121,'arun','vijaywada',521325);
 insert into student values(123,'varun','mudinepalli',521325);
 insert into student values(124,'tarun','vijaywada',521325);
